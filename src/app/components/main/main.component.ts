@@ -42,23 +42,24 @@ export class MainComponent implements OnInit {
     {
       displayName: 'Home',
       iconName: 'recent_actors',
-      children: [
-        {
-          displayName: 'Home-1',
-          iconName: 'group',
-          route: '/home/one'
-        },
-        {
-          displayName: 'Home-2',
-          iconName: 'speaker_notes',
-          route: '/home/two',
-        },
-        {
-          displayName: 'Home-3',
-          iconName: 'feedback',
-          route: '/home/three'
-        }
-      ]
+      route: '/'
+      // children: [
+      //   {
+      //     displayName: 'Home-1',
+      //     iconName: 'group',
+      //     route: '/home/one'
+      //   },
+      //   {
+      //     displayName: 'Home-2',
+      //     iconName: 'speaker_notes',
+      //     route: '/home/two',
+      //   },
+      //   {
+      //     displayName: 'Home-3',
+      //     iconName: 'feedback',
+      //     route: '/home/three'
+      //   }
+      // ]
     },
     {
       displayName: 'Products',
