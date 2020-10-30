@@ -1,7 +1,7 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class User extends Entity {
+export class Picture extends Entity {
   @property({
     type: 'string',
     id: true,
@@ -13,28 +13,26 @@ export class User extends Entity {
     type: 'string',
     required: true,
   })
-  firstname: string;
+  small: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  lastname: string;
+  big: string;
 
   @property({
     type: 'string',
-    required: true,
   })
-  email: string;
+  productId?: string;
 
-
-  constructor(data?: Partial<User>) {
+  constructor(data?: Partial<Picture>) {
     super(data);
   }
 }
 
-export interface UserRelations {
+export interface PictureRelations {
   // describe navigational properties here
 }
 
-export type UserWithRelations = User & UserRelations;
+export type PictureWithRelations = Picture & PictureRelations;

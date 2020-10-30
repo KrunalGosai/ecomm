@@ -1,2 +1,2 @@
-export * from './userauth.controller';
-export * from './user.controller';
+export * from './userauth.controller';export * from './product.controller';
+export * from './product-picture.controller';
