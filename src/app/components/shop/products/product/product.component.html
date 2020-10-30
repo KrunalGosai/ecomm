@@ -1,12 +1,12 @@
 <div class="product-item"  >
   <mat-card fxLayout="column">
     <div class="product-img">
-        <a class="product-link" [routerLink]="['/home/product', product.id]">
-          <img [src]="product.pictures[0].big" alt="">
+        <a class="product-link" [routerLink]="['/home/product', product._id]">
+          <img [src]="product.pictures[0].big" alt="product img">
        </a>
     </div>
      <div class="product-info-wrapper">
-        <span class="category">{{product.category}}</span>
+        <span class="category">{{product.categoryname}}</span>
         <div class="title-wrap">
            <h4>{{product.name}}</h4>
         </div>

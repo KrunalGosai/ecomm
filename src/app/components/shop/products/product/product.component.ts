@@ -25,7 +25,6 @@ export class ProductComponent implements OnInit {
      // Add to cart
      public addToCart(product: Product,  quantity: number = 1) {
       this.cartService.addToCart(product,quantity);
-      console.log(product, quantity);
     }
 
     // Add to wishlist
@@ -46,7 +45,7 @@ export class ProductComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(product => {
       if(product){
-        this.router.navigate(['/products', product.id, product.name]);
+        this.router.navigate(['/products', product._id, product.name]);
       }
     });
   }

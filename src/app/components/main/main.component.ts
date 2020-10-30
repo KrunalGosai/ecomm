@@ -1,3 +1,4 @@
+import { MyAccountService } from './../pages/my-account/my-account.service';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import {Product} from "../../modals/product.model";
 import {CartItem} from "../../modals/cart-item";
@@ -260,7 +261,9 @@ export class MainComponent implements OnInit {
     }
   ];
 
-  constructor(public router: Router, private cartService: CartService, public sidenavMenuService:SidebarMenuService) {
+  constructor(public router: Router,
+    private accountService:MyAccountService, 
+    private cartService: CartService, public sidenavMenuService:SidebarMenuService) {
     this.cartService.getItems().subscribe(shoppingCartItems => this.shoppingCartItems = shoppingCartItems);
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -282,5 +285,15 @@ export class MainComponent implements OnInit {
   }
   public changeLang(flag){
     this.flag = flag;
+  }
+
+  public myAccountClick(){
+    //check user login
+    let token = this.accountService.getCookie('authtoken');
+    if(token && token.trim() != ''){
+      this.router.navigate(['pages','profile']);
+    }else{
+      this.router.navigate(['pages','my-account']);
+    }
   }
 }

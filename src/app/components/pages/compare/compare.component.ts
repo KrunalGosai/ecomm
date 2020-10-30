@@ -21,7 +21,6 @@ export class CompareComponent implements OnInit {
   ngOnInit() {
     this.product = this.productService.getComapreProducts();
     this.product.subscribe(products => this.products = products);
-    console.log(this.product);
   }
 
      // Add to cart

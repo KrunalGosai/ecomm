@@ -40,7 +40,7 @@
                   <div class="product-right">
                      <div class="product-details">
                         <h2>{{product.name}}</h2>
-                        <h4 *ngIf="!productsService?.catalogMode"><del>{{product.salePrice | currency:productsService?.currency:'symbol'}}</del><span>{{product.discount}}% off</span></h4>
+                        <h4 *ngIf="!productsService?.catalogMode"><del>{{product.saleprice | currency:productsService?.currency:'symbol'}}</del><span>{{product.discount}}% off</span></h4>
                         <h3 class="price" *ngIf="!productsService?.catalogMode">{{product.price | currency:productsService?.currency:'symbol'}}</h3>
                         <p class="text-muted description">{{product.description}}</p>
                      </div>

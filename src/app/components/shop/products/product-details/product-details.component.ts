@@ -34,8 +34,8 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, public productsService: ProductService, public dialog: MatDialog, private router: Router, private cartService: CartService) {
     this.route.params.subscribe(params => {
-      const id = +params['id'];
-      this.productsService.getProduct(id).subscribe(product => this.product = product)
+      const id = params.id;
+      this.productsService.getProduct(id).subscribe(product => {this.product = product; console.log('display product',product)})
     });
    }
 
@@ -86,7 +86,7 @@ export class ProductDetailsComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(product => {
       if (product) {
-        this.router.navigate(['/products', product.id, product.name]);
+        this.router.navigate(['/products', product._id, product.name]);
       }
     });
   }

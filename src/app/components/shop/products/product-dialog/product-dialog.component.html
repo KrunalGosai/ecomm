@@ -17,7 +17,7 @@
           <div class="product-right">
               <div class="product-details">
                   <h2 class="mb-10">{{product.name}}</h2>
-                <h4 class="mb-10" ><del>{{product.salePrice | currency:productsService?.currency:'symbol'}}</del><span>{{product.discount}}% off</span></h4>
+                <h4 class="mb-10" ><del>{{product.saleprice | currency:productsService?.currency:'symbol'}}</del><span>{{product.discount}}% off</span></h4>
                 <h3 class="price mb-10">{{product.price | currency:productsService?.currency:'symbol' }}</h3>
                 <div class="discription">
                   <p class="bold">Product details</p>

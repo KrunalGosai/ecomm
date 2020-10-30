@@ -47,7 +47,7 @@ export class ProductDialogComponent implements OnInit {
 
      // Add to cart
      public buyNow() {
-      this.router.navigate(['/home/product', this.product.id]);
+      this.router.navigate(['/home/product', this.product._id]);
       this.close();
    }
 
