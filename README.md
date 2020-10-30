@@ -2,7 +2,7 @@
 
 ## Frontend Code
 
-Branch Name 'frontedn-dev'
+Branch Name 'frontend-dev'
 
 ## Backend Code
 
