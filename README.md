@@ -6,4 +6,4 @@ Branch Name 'frontend-dev'
 
 ## Backend Code
 
-Brach Name 'backend-dev'
+Branch Name 'backend-dev'
