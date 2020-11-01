@@ -1,11 +1,6 @@
 <div class="category-contant">
     <ul>
         <li><a class="no-brd" [routerLink]="['/home/products/all']">Show All</a></li>
-        <li><a [routerLink]="['/home/products/Headphones']">Headphones</a></li>
-        <li><a [routerLink]="['/home/products/Laptops']">Laptops</a></li>
-        <li><a [routerLink]="['/home/products/Smartphones']">Smart Phones</a></li>
-        <li><a [routerLink]="['/home/products/Cameras']">Cameras</a></li>
-        <li><a [routerLink]="['/home/products/Tv & Audio']">Tv & Audio</a></li>
-        <li><a [routerLink]="['/home/products/Watches']">Watches</a></li>
+        <li><a *ngFor="let item of categories" [routerLink]="['/home/products', item.name ]">{{item.name}}</a></li>
     </ul>
 </div>

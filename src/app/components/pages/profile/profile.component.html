@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<div class="blog-details">
+    <div class="container">
+      <div class="blog-list-wrapper sec-padding" fxLayout="row" fxLayout.lt-md="column">
+          <div fxFlex="100" fxFlex.gt-sm="100"  class="main-blog-panel">
+              <div class="single-blog-list" >
+                  <div  class="image-box">
+                    <img src="assets/images/blog/b3.jpg" alt="">
+                  </div>
+                  <div class="text-box">
+                    <h3>Welcome to Profile Area</h3>
+                    
+                    <p>Click here to logout</p>
+                    <button class="btn-project" (click)="logoutclick();" mat-raised-button color="accent" type="submit">Logout</button>
+                    
+                 </div>
+              </div>
+           </div>
+      </div>
+    </div>
+  </div>
+  

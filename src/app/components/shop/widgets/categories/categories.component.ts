@@ -1,3 +1,4 @@
+import { CategoriesService } from './categories.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoriesService:CategoriesService) { }
+  public categories = [];
 
   ngOnInit() {
+    this.loadCategories();
+  }
+
+  private loadCategories(){
+    this.categoriesService.getAllCategories().toPromise().then(cate => {
+      let data:any = cate;
+      this.categories = data;
+    }).catch(err => console.error(err));
   }
 
 }

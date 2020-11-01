@@ -1,3 +1,4 @@
+import { CategoriesService } from './../../shop/widgets/categories/categories.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoriesService:CategoriesService) { }
+  mainCategories = [];
 
   ngOnInit() {
+    this.loadMenuFromCategories();
   }
   openMegaMenu(){
     let pane = document.getElementsByClassName('cdk-overlay-pane');
@@ -20,5 +23,12 @@ export class MenuComponent implements OnInit {
           }
         }
     });
+  }
+
+  private loadMenuFromCategories(){
+    this.categoriesService.getMainCategories().toPromise().then(cate => {
+      let data:any = cate;
+      this.mainCategories = data;
+    }).catch(err => console.error(err))
   }
 }
