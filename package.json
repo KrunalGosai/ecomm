@@ -32,7 +32,7 @@
     "preopenapi-spec": "npm run build",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "npm run build",
-    "start": "node -r source-map-support/register .",
+    "start": "node dist/index.js",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
   },
   "repository": {
