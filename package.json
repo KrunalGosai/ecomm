@@ -55,11 +55,11 @@
     "@loopback/rest-explorer": "^3.0.2",
     "@loopback/service-proxy": "^3.0.2",
     "loopback-connector-mongodb": "^5.4.0",
+    "source-map-support": "^0.5.19",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@loopback/build": "^6.2.5",
-    "source-map-support": "^0.5.19",
     "@loopback/testlab": "^3.2.7",
     "@types/node": "^10.17.37",
     "@loopback/eslint-config": "^10.0.1",
